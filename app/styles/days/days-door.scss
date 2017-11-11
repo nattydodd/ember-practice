@@ -1,0 +1,25 @@
+.days {
+  &__list {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+
+    &__item {
+      text-align: center;
+      &__door {
+        &__inner {
+          border: 1px solid black;
+          width: 100px;
+          height: 100px;
+          margin: 20px;
+        }
+      }
+    }
+  }
+
+  &__progressbar {
+    width: 50%;
+    background-color: red;
+    height: 20px;
+  }
+}

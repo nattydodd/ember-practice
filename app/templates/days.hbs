@@ -1,8 +1,18 @@
-<h1>Questionnaires</h1>
+{{days/days-progressbar}}
 
-<ul>
-    <li>{{link-to 'Pizza Questionnaire' 'questionnaire' 'pizza'}}</li>
-    <li>{{link-to 'TV Questionnaire' 'questionnaire' 'tv'}}</li>
+<ul class="days__list">
+    <li class="days__list__item">
+        {{days/days-door class="days__list__item__door"}}
+        {{link-to '1' 'day' '1'}}
+    </li>
+    <li class="days__list__item">
+        {{days/days-door class="days__list__item__door"}}
+        {{link-to '2' 'day' '2'}}
+    </li>
+    <li class="days__list__item">
+        {{days/days-door class="days__list__item__door"}}
+        {{link-to '3' 'day' '3'}}
+    </li>
 </ul>
 
 {{outlet}}

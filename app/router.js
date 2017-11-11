@@ -7,8 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/' });
   this.route('days', {}); // "/days"
-  this.route('day', {path: 'day/:id'}); // "/day/2"
+  this.route('day', { path: 'day/:id' }); // "/day/2"
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
