@@ -7,8 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('questionnaires', {}); // "/questionnaires"
-  this.route('questionnaire', {path: 'questionnaire/:id'}); // "/questionnaire/2"
+  this.route('days', {}); // "/days"
+  this.route('day', {path: 'day/:id'}); // "/day/2"
 });
 
 export default Router;
