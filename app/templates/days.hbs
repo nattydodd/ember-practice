@@ -1,18 +1,15 @@
-{{days/days-progressbar}}
+<h1>Days until Christmas: {{model.daysUntilChristmas}}</h1>
+
+{{days/days-progressbar daysUntilChristmas=model.daysUntilChristmas}}
 
 <ul class="days__list">
+  {{#each model.days as |day| }}
     <li class="days__list__item">
-        {{days/days-door class="days__list__item__door"}}
-        {{link-to '1' 'day' '1'}}
+      {{days/days-door day=day daysUntilChristmas=model.daysUntilChristmas class="days__list__item__door"}}
+      {{link-to day 'day' day}}
     </li>
-    <li class="days__list__item">
-        {{days/days-door class="days__list__item__door"}}
-        {{link-to '2' 'day' '2'}}
-    </li>
-    <li class="days__list__item">
-        {{days/days-door class="days__list__item__door"}}
-        {{link-to '3' 'day' '3'}}
-    </li>
+  {{/each}}
 </ul>
 
-{{outlet}}
+{{!-- if there were subroutes you could lead to them here: --}}
+{{!--{{outlet}} --}}

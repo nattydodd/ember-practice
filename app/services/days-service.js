@@ -8,5 +8,13 @@ export default Ember.Service.extend({
     },
     setProgress(percentage) {
       this.set('progress', percentage);
+    },
+    getDays() {
+      // this can be refactored
+      const days = [];
+      for (let i = 1; i < 26; i++) {
+        days.push(i);
+      }
+      return days;
     }
 });

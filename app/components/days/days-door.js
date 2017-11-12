@@ -10,15 +10,22 @@ export default Ember.Component.extend({
     return percentage;
   },
 
+  calculateDaysLeft(id) {
+    let daysLeft = 25 - id;
+    return daysLeft;
+  },
+
   actions: {
 
     toggleOpen(id) {
       if ($(`#door${id}`).hasClass("days__list__item__door__inner--open")) {
         this.get('daysService').setProgress(this.calculatePercentage(id - 1));
         $(`#door${id}`).toggleClass("days__list__item__door__inner--open");
+        this.set('daysUntilChristmas', this.calculateDaysLeft(id - 1));
       } else {
         this.get('daysService').setProgress(this.calculatePercentage(id));
         $(`#door${id}`).toggleClass("days__list__item__door__inner--open");
+        this.set('daysUntilChristmas', this.calculateDaysLeft(id));
       }
     }
 
